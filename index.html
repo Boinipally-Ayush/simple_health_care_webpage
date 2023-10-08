@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Health</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            /* overflow: auto; */
+        }
+
+        .main-h {
+            font-size: 250%;
+            text-align: center;
+            text-shadow: 2px 2px darksalmon;
+        }
+
+        .navbar {
+            background-color: rgb(194, 194, 244);
+            /* width: 100%;
+                height: 6vh; */
+        }
+
+        .navlist {
+            display: flex;
+
+        }
+
+        .navlist li {
+            list-style: none;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 0.75%;
+            font-size: 120%;
+        }
+
+        .navlist li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* .sign-btn{
+            background-color: black;
+        } */
+        .sign {
+            color: white;
+            text-decoration: none;
+            padding: 1%;
+            background-color: black;
+            margin-left: 20%;
+            border: 0.1% solid black;
+            border-radius: 10px;
+        }
+
+        .sign-2 {
+            color: white;
+            text-decoration: none;
+            padding: 1%;
+            background-color: black;
+            margin-left: 5%;
+            border: 0.1% solid black;
+            border-radius: 10px;
+        }
+
+        .hospital-img {
+            width: 85vw;
+            height: 70vh;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border: 2% solid rgb(194, 194, 244);
+            border-radius: 2%;
+            box-shadow: 12px 12px 30px rgb(194, 194, 244), -12px -12px 30px rgb(194, 194, 244);
+        }
+
+        .mid {
+            width: 100vw;
+            /* background-color: rgb(194, 194, 244); */
+            padding: 2%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .mid-1 {
+            /* width: 28vw; */
+            margin: 2%;
+            border: 2px solid rgb(194, 194, 244);
+            padding: 2.5%;
+            box-shadow: 12px 12px 20px rgb(194, 194, 244), -12px -12px 20px rgb(194, 194, 244);
+
+        }
+
+        .mid-1 img {
+            width: 20vw;
+            height: 20vh;
+            display: block;
+            margin: auto;
+        }
+
+        .mid-1 p {
+            font-size: 120%;
+        }
+
+        .mid-1 a {
+
+            text-decoration: none;
+            background-color: coral;
+            border: 2px solid black;
+            border-radius: 5px;
+            color: black;
+            padding: 1%;
+        }
+
+        .mid-1 b {
+            font-size: 120%;
+            margin: auto;
+            width: 10%;
+            display: block;
+        }
+
+        /* @media  (max-width:850px){
+         .mid{
+            flex-direction: column;
+            width: 100vw;
+            box-sizing: content-box;
+         }
+        } */
+        #toggle,
+        label {
+            display: none;
+        }
+
+        @media only screen and (max-width:800px) {
+
+            .navlist{
+                display: none;
+            }
+
+            .navbar {
+                width: 100%;
+                /* height: 5vh; */
+            }
+
+            label {
+                display: flex;
+                /* position: relative;
+                left: 90%;
+                top: 5.35%;*/ } 
+
+            #toggle:checked~.navlist {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main-h">Care your Health</h1>
+        <nav class="navbar">
+            <ul class="navlist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">contact us</a></li>
+                <!-- <li class="sign-btn"> -->
+                <a href="#" class="sign">Sign In</a>
+                <a href="#" class="sign-2">Sign Up</a>
+                <!-- </li> -->
+            </ul>
+            <input type="checkbox" id="toggle">
+            <label for="toggle">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z" />
+                </svg>
+            </label>
+        </nav>
+    </header>
+    <main>
+        <img class="hospital-img"
+            src="https://media.istockphoto.com/id/1390886692/photo/homecare-visit-with-a-senior-gentleman.jpg?b=1&s=170667a&w=0&k=20&c=Y94dEfq3QhHLCXeBOEfCoqPZURnk365FD4-xv813rzc="
+            alt="img">
+        <div class="mid">
+            <div class="mid-1">
+                <img src="https://media.istockphoto.com/id/1407159023/photo/diabetes-word-on-bock-shape-and-spoon-with-sugar-inside.jpg?b=1&s=170667a&w=0&k=20&c=Vpjon698TZCgxSaQ1hsWZJuAPvZW1xJNGXFqXhFEXC0="
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet dolorum vel similique facilis
+                    assumenda voluptas eaque non aut! Quo esse eveniet accusamus itaque consequatur maiores eligendi
+                    aliquid mo</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="mid-1">
+                <img src="https://media.istockphoto.com/id/1291652346/photo/human-kidney-in-hands.jpg?b=1&s=170667a&w=0&k=20&c=TfPImQbizfnwa3kRgHgUQC8Vq1vseKm-OYpG0YSkmAA="
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet dolorum vel similique facilis
+                    assumenda voluptas eaque non aut! Quo esse eveniet accusamus itaque consequatur maiores eligendi
+                    aliquid mo</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="mid-1">
+                <img src="https://media.istockphoto.com/id/1421002902/photo/doctor-check-and-diagnose-the-pain-in-knee-joint-on-medical-background-3d-illustration.jpg?b=1&s=170667a&w=0&k=20&c=YTxrenK2GrYmza3y3XYObFlTud2U84bg93ZPPbRePTQ="
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet dolorum vel similique facilis
+                    assumenda voluptas eaque non aut! Quo esse eveniet accusamus itaque consequatur maiores eligendi
+                    aliquid mo</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="mid-1">
+                <b>Cardiologist</b>
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRvY3RvcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet dolorum vel similique facilis
+                    assumenda voluptas eaque non aut! Quo esse eveniet accusamus itaque consequatur maiores eligendi
+                    aliquid mo</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="mid-1">
+                <b>Oncologist</b>
+                <img src="https://media.istockphoto.com/id/1415794736/photo/concentrated-afro-american-woman-doctor-using-laptop-while-sitting-at-workplace-in-medical.jpg?b=1&s=170667a&w=0&k=20&c=Odxde1zWO1R2CIPLZg17E6hpCBiXH5CCF_TB3pJ2S6E="
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet dolorum vel similique facilis
+                    assumenda voluptas eaque non aut! Quo esse eveniet accusamus itaque consequatur maiores eligendi
+                    aliquid mo</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="mid-1">
+                <b>Nephrologist</b>
+                <img src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGRvY3RvcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque amet dolorum vel similique facilis
+                    assumenda voluptas eaque non aut! Quo esse eveniet accusamus itaque consequatur maiores eligendi
+                    aliquid mo</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
